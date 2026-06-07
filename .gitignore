@@ -1,0 +1,17 @@
+# Editor
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data / model artifacts
+*.bin
+*.pt
+*.safetensors

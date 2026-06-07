@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340" role="img" aria-label="Dense Embedding Fine-Tuning via Knowledge Distillation">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1120"/>
+      <stop offset="0.55" stop-color="#111A33"/>
+      <stop offset="1" stop-color="#1E1145"/>
+    </linearGradient>
+    <linearGradient id="title" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#5EEAD4"/>
+      <stop offset="0.5" stop-color="#60A5FA"/>
+      <stop offset="1" stop-color="#C084FC"/>
+    </linearGradient>
+    <linearGradient id="teach" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#A855F7"/>
+      <stop offset="1" stop-color="#7C3AED"/>
+    </linearGradient>
+    <linearGradient id="stud" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2DD4BF"/>
+      <stop offset="1" stop-color="#0EA5A4"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#60A5FA" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#60A5FA" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="340" rx="18" fill="url(#bg)"/>
+  <circle cx="930" cy="150" r="260" fill="url(#glow)"/>
+
+  <!-- dotted embedding grid, left field -->
+  <g fill="#2B3A66" opacity="0.55">
+    <circle cx="70"  cy="60"  r="2.4"/><circle cx="110" cy="60"  r="2.4"/><circle cx="150" cy="60"  r="2.4"/>
+    <circle cx="70"  cy="100" r="2.4"/><circle cx="110" cy="100" r="2.4"/><circle cx="150" cy="100" r="2.4"/>
+    <circle cx="70"  cy="280" r="2.4"/><circle cx="110" cy="280" r="2.4"/><circle cx="150" cy="280" r="2.4"/>
+    <circle cx="70"  cy="240" r="2.4"/><circle cx="110" cy="240" r="2.4"/><circle cx="150" cy="240" r="2.4"/>
+  </g>
+
+  <!-- title block -->
+  <text x="64" y="138" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="56" font-weight="800" fill="url(#title)">Dense Embedding Fine-Tuning</text>
+  <text x="66" y="186" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="27" font-weight="600" fill="#C7D2FE">Knowledge Distillation &#183; KL-Divergence + InfoNCE</text>
+  <text x="66" y="224" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="18" font-weight="400" fill="#7E8AB5">An E5 replication: a cross-encoder reranker teaches a bi-encoder to retrieve.</text>
+
+  <!-- teacher -> student distillation diagram -->
+  <g font-family="'Segoe UI',Helvetica,Arial,sans-serif">
+    <!-- teacher -->
+    <rect x="690" y="92" width="172" height="58" rx="12" fill="url(#teach)"/>
+    <text x="776" y="120" text-anchor="middle" font-size="17" font-weight="700" fill="#FFFFFF">Teacher</text>
+    <text x="776" y="139" text-anchor="middle" font-size="12" fill="#EDE9FE">BGE-reranker-v2-m3</text>
+
+    <!-- soft labels arrow -->
+    <line x1="776" y1="150" x2="776" y2="196" stroke="#8B93C0" stroke-width="2.2" stroke-dasharray="5 5"/>
+    <polygon points="776,206 770,194 782,194" fill="#8B93C0"/>
+    <text x="792" y="180" font-size="12.5" fill="#A5B4FC">soft labels &#183; softmax(s/&#964;), &#964;=2.0</text>
+
+    <!-- student -->
+    <rect x="690" y="206" width="172" height="58" rx="12" fill="url(#stud)"/>
+    <text x="776" y="234" text-anchor="middle" font-size="17" font-weight="700" fill="#04201F">Student</text>
+    <text x="776" y="253" text-anchor="middle" font-size="12" fill="#063B3A">e5-base &#183; 109M &#183; 768-d</text>
+
+    <!-- vector chips on far right -->
+    <g opacity="0.92">
+      <rect x="912" y="96" width="200" height="22" rx="6" fill="#13213F" stroke="#33406B"/>
+      <rect x="912" y="96" width="120" height="22" rx="6" fill="#3B82F6" opacity="0.65"/>
+      <text x="922" y="111" font-size="11" fill="#9FB3E0">nDCG@10  0.575</text>
+
+      <rect x="912" y="156" width="200" height="22" rx="6" fill="#13213F" stroke="#33406B"/>
+      <rect x="912" y="156" width="156" height="22" rx="6" fill="#2DD4BF" opacity="0.55"/>
+      <text x="922" y="171" font-size="11" fill="#9FE6DC">Recall@10  0.780</text>
+
+      <rect x="912" y="216" width="200" height="22" rx="6" fill="#13213F" stroke="#33406B"/>
+      <rect x="912" y="216" width="104" height="22" rx="6" fill="#A855F7" opacity="0.55"/>
+      <text x="922" y="231" font-size="11" fill="#D8C6F9">MRR@10  0.526</text>
+    </g>
+  </g>
+
+  <rect x="0.5" y="0.5" width="1199" height="339" rx="18" fill="none" stroke="#2A335A" stroke-width="1"/>
+</svg>
