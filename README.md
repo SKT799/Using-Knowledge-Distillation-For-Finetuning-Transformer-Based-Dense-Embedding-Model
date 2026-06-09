@@ -98,7 +98,7 @@ $$\mathcal{L} = \mathcal{L}_{\text{KL}} + \alpha \cdot \mathcal{L}_{\text{InfoNC
 
 **KL divergence — knowledge distillation.** Match the student's candidate distribution to the teacher's:
 
-$$\mathcal{L}_{\text{KL}} = D_{\text{KL}}\!\left( p^{\text{teacher}}|p^{\text{student}} \right) = \sum_{i=1}^{K} p_i^{\text{teacher}} \log \frac{p_i^{\text{teacher}}}{p_i^{\text{student}}}$$
+$$\mathcal{L}_{\text{KL}} = D_{\text{KL}}\\left( p^{\text{teacher}}|p^{\text{student}} \right) = \sum_{i=1}^{K} p_i^{\text{teacher}} \log \frac{p_i^{\text{teacher}}}{p_i^{\text{student}}}$$
 
 - $p^{\text{teacher}}_i = \text{softmax}(s_i^{\text{teacher}} / \tau)$, the cached reranker distribution, $\tau = 2.0$
 - $p^{\text{student}}_i = \text{softmax}(\text{sim}(q, d_i) / \tau)$, cosine similarities from the student
