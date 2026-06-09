@@ -67,7 +67,7 @@ flowchart LR
       direction TB
       STU[e5-base-unsupervised<br/>mean-pool + L2 norm] --> KL[KL Divergence<br/>match the teacher]
       STU --> NCE[InfoNCE<br/>hard + in-batch negs]
-      KL --> TOT[L = L_KL + &#945;&#183;L_InfoNCE]
+      KL --> TOT[L = L_KL + #945;#183;L_InfoNCE]
       NCE --> TOT
     end
 
