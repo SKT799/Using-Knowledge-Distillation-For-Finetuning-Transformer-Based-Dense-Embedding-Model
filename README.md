@@ -32,7 +32,7 @@
 
 ```
 Why this project?:
-Because E5 released by microsoft. All the paper details are there but official code is not public so I gone through the full paper following the entire reciepe I prepared the full code along with the datasets & made everything public.
+Because E5 was released by microsoft. All the paper details are there but official code is not public so I gone through the full paper following the entire reciepe I prepared the full finetuning code along with the datasets because even the datasets are not in right format & I made everything public that you can use.
 ```
 
 
