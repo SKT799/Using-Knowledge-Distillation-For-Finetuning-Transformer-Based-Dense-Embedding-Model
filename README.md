@@ -57,7 +57,7 @@ flowchart LR
     subgraph OFFLINE [Offline · done once]
       direction TB
       DPR[(Dataset derived from DPR top-k<br/>7 hard negatives)] --> TEA[BGE-reranker-v2-m3<br/>cross-encoder]
-      TEA --> SM[softmax over the 8<br/>scores · &#964; = 2.0]
+      TEA --> SM[softmax over the 8<br/>scores · #964; = 2.0]
       SM --> LAB[(soft label<br/>p_pos, p_neg1..7)]
     end
 
