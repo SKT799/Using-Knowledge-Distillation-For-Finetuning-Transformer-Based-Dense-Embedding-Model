@@ -22,7 +22,7 @@ A faithful replication of the **E5** fine-tuning recipe: a `BGE-reranker-v2-m3` 
 ![Sentence Transformers](https://img.shields.io/badge/Sentence_Transformers-Trainer-FFD21E?style=flat-square&logo=huggingface&logoColor=black)
 ![BEIR](https://img.shields.io/badge/Eval-BEIR_NQ-005571?style=flat-square)
 ![My_nDCG@10](https://img.shields.io/badge/nDCG@10-0.575-2EA043?style=flat-square)
-![Original_nDCG@10](https://img.shields.io/badge/nDCG@10-0.575-2EA043?style=flat-square)
+![Original_nDCG@10](https://img.shields.io/badge/nDCG@10-0.59-2EA043?style=flat-square)
 
 </div>
 
