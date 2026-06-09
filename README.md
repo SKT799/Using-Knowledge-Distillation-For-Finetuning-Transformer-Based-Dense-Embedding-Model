@@ -30,7 +30,13 @@
 
 ## The problem I was solving
 
-A bi-encoder is fast. You embed every passage once, drop the vectors in an index, and answer queries with a dot product. The catch is that it scores each side in isolation — the query never *sees* the passage — so it routinely ranks a plausible-looking decoy above the real answer.
+```
+Why this project?:
+Because E5 released by microsoft. All the paper details are there but official code is not public so I gone through the full paper following the entire reciepe I prepared the full code along with the datasets & made everything public.
+```
+
+
+A bi-encoder is fast. You embed every passage once, drop the vectors in an index and answer queries with a dot product. The catch is that it scores each side in isolation — the query never *sees* the passage — so it routinely ranks a plausible-looking decoy above the real answer.
 
 A cross-encoder doesn't have that blind spot. It reads the query and passage *together* and judges the pair, which makes it far more accurate and far too slow to run over millions of documents at query time.
 
