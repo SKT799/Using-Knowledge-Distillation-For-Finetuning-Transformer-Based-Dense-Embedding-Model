@@ -118,15 +118,18 @@ Why both? KL alone teaches the *ordering* the teacher prefers but is loose about
 ## The data, and how it was built
 
 Hard negatives are where retrieval distillation lives or dies — random negatives are too easy to teach anything. So the labels come out of a small mining pipeline rather than off the shelf:
+Per query , there are multiple positive answers and for each query we have ~30 HNs from DPR/BM25. So 
+I derived a separate NQ Dataset from DPR(~67k Qs + Ds + HNs)
 
+Let say a query has 3 Documents then, 1 row of DPR becomes 3 rows each with same query but , separate Document & separate 7 HNs. 
 ```
 DPR top-k retrieval          BGE reranker scoring           Softmax (τ = 2.0)
 ┌──────────────────┐     ┌──────────────────────┐     ┌────────────────────┐
-│  query → top-100 │ ──→ │ cross-encoder scores │ ──→ │ p(d|q) = softmax   │
+│  query → top 7   │ ──→ │ cross-encoder scores │ ──→ │ p(d|q) = softmax   │
 │  DPR/BM25 negs   │     │ for every (q, d)     │     │ (score_i / τ)      │
 └──────────────────┘     └──────────────────────┘     └─────────┬──────────┘
-                                                                 │
-                                              keep top-7 hard negs + 1 positive,
+                                                                │
+                                              7 hard negs + 1 positive,
                                               each carrying its probability label
 ```
 
