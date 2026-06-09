@@ -6,7 +6,7 @@
 
 ### Teaching a small bi-encoder to retrieve like a heavy cross-encoder — by distilling the reranker's knowledge into E5 using KL_Div.
 
-A faithful replication of the **E5** fine-tuning recipe: a `BGE-reranker-v2-m3` cross-encoder grades query–passage pairs, and an `e5-base` bi-encoder learns to imitate that ranking through a hybrid **KL-Divergence + InfoNCE** loss. The reranker never ships — only its soft labels do.
+**E5** fine-tuning recipe: a `BGE-reranker-v2-m3` cross-encoder grades query–passage pairs, and an `e5-base` bi-encoder learns to imitate that ranking through a hybrid **KL-Divergence + InfoNCE** loss with in-batch negatives.
 
 <br/>
 
