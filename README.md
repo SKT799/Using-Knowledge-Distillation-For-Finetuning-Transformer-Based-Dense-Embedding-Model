@@ -12,7 +12,6 @@ A faithful replication of the **E5** fine-tuning recipe: a `BGE-reranker-v2-m3` 
 
 [![Paper](https://img.shields.io/badge/Paper-E5_(arXiv_2212.03533)-B31B1B?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2212.03533)
 &nbsp;
-[![View Source Code](https://img.shields.io/badge/View-Source_Code-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/SKT799/Using-Knowledge-Distillation-For-Finetuning-Transformer-Based-Dense-Embedding-Model)
 
 <br/>
 
@@ -23,7 +22,6 @@ A faithful replication of the **E5** fine-tuning recipe: a `BGE-reranker-v2-m3` 
 ![Sentence Transformers](https://img.shields.io/badge/Sentence_Transformers-Trainer-FFD21E?style=flat-square&logo=huggingface&logoColor=black)
 ![BEIR](https://img.shields.io/badge/Eval-BEIR_NQ-005571?style=flat-square)
 ![nDCG@10](https://img.shields.io/badge/nDCG@10-0.575-2EA043?style=flat-square)
-![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)
 
 </div>
 
