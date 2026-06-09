@@ -54,9 +54,9 @@ So you get the obvious idea: keep the cross-encoder's judgement, throw away its 
 
 ```mermaid
 flowchart LR
-    subgraph OFFLINE [Offline · done once, on CPU/GPU]
+    subgraph OFFLINE [Offline · done once]
       direction TB
-      DPR[(DPR top-k<br/>hard negatives)] --> TEA[BGE-reranker-v2-m3<br/>cross-encoder]
+      DPR[(Dataset derived from DPR top-k<br/>7 hard negatives)] --> TEA[BGE-reranker-v2-m3(my choice)<br/>cross-encoder]
       TEA --> SM[softmax over the 8<br/>scores · &#964; = 2.0]
       SM --> LAB[(soft label<br/>p_pos, p_neg1..7)]
     end
